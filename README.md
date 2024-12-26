@@ -1,6 +1,6 @@
 <div align='center'>
   <a>
-    <img src="logo.png" alt='logo'>
+    <img width='200' src="logo.png" alt='logo'>
   </a>
 </div>
 
@@ -15,7 +15,6 @@ behavior in dynamic or responsive designs.
 - Detects if the flex container's children wrap to multiple lines.
 - Provides the number of wrapping lines ("wrap stages").
 - Reacts to changes in size, content, or layout of the flex container.
-- Includes debounce support to optimize performance.
 
 ## Usage
 
