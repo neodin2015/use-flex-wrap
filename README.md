@@ -44,17 +44,18 @@ export default ExampleComponent;
 
 ## API
 
-### `useFlexWrap(options?: IUseFlexWrapOptions)`
+### `useFlexWrap<T extends HTMLElement>(options?: IUseFlexWrapOptions)`
 
 #### Parameters
-
-`options` (optional):
+- **`T`** *(generic, optional)*:
+  Specifies the type of the element that will be assigned to the `ref`. Defaults to `HTMLElement`.
+- `options` (optional):
 
 - **debounceTime** (`number`): The debounce duration in milliseconds for recalculating layout changes. Default is
   `300ms`.
 
 #### Returns
 
-- **ref**: A `ref` to attach to the flex container you want to monitor.
+- **ref**: `ref<T>` to attach to the flex container you want to monitor.
 - **wrap**: A `boolean` indicating whether the children are wrapping to multiple lines.
 - **wrapStage**: A `number` representing the number of lines ("wrap stages") in the container.
