@@ -6,8 +6,8 @@ interface IUseFlexWrapOptions {
 }
 
 
-export const useFlexWrap = ({ debounceTime = 300 }: IUseFlexWrapOptions = {}) => {
-	const containerRef = useRef<HTMLElement>(null);
+export const useFlexWrap = <T extends HTMLElement>({ debounceTime = 300 }: IUseFlexWrapOptions = {}) => {
+	const containerRef = useRef<T>(null);
 	const [wrap, setWrap] = useState(false);
 	const [wrapStage, setWrapStage] = useState(0);
 
