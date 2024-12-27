@@ -16,6 +16,14 @@ behavior in dynamic or responsive designs.
 - Provides the number of wrapping lines ("wrap stages").
 - Reacts to changes in size, content, or layout of the flex container.
 
+## Installation
+
+```bash
+yarn add use-flex-wrap
+# or
+npm i use-flex-wrap --save
+```
+
 ## Usage
 
 ```tsx
@@ -50,9 +58,8 @@ export default ExampleComponent;
 - **`T`** *(generic, optional)*:
   Specifies the type of the element that will be assigned to the `ref`. Defaults to `HTMLElement`.
 - `options` (optional):
-
-- **debounceTime** (`number`): The debounce duration in milliseconds for recalculating layout changes. Default is
-  `300ms`.
+  - **debounceTime** (`number`): The debounce duration in milliseconds for recalculating layout changes. Default is
+    `300ms`.
 
 #### Returns
 
