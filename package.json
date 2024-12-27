@@ -1,6 +1,6 @@
 {
   "name": "use-flex-wrap",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "type": "module",
   "files": [
     "dist"
@@ -41,5 +41,13 @@
     "typescript-eslint": "^8.18.2",
     "vite": "^6.0.5",
     "vite-plugin-dts": "^4.4.0"
-  }
+  },
+  "keywords": [
+    "react",
+    "hook",
+    "flex-wrap",
+    "use-flex-wrap",
+    "react-flex",
+    "react-hooks"
+  ]
 }

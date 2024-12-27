@@ -28,7 +28,7 @@ export const useFlexWrap = <T extends HTMLElement>({ debounceTime = 300 }: IUseF
 		const isWrap = uniqueLines.length > 1 || container.scrollHeight > containerHeight;
 
 		setWrap(isWrap);
-		setWrapStage(isWrap ? numberOfLines : 0);
+		setWrapStage(isWrap ? (numberOfLines - 1) : 0);
 	}, []);
 
 	useEffect(() => {
