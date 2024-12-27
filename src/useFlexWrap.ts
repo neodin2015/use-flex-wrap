@@ -11,8 +11,12 @@ export const useFlexWrap = <T extends HTMLElement>({ debounceTime = 300 }: IUseF
 	const [wrap, setWrap] = useState(false);
 	const [wrapStage, setWrapStage] = useState(0);
 
-	const calculateWrap = useCallback(() => {
-		if (!containerRef.current) return;
+	const detectWrap = useCallback(() => {
+		if (!containerRef.current) {
+			setWrap(false);
+			setWrapStage(0);
+			return;
+		}
 
 		const container = containerRef.current;
 		const isRow = getComputedStyle(container).flexDirection === 'row';
@@ -32,7 +36,7 @@ export const useFlexWrap = <T extends HTMLElement>({ debounceTime = 300 }: IUseF
 	}, []);
 
 	useEffect(() => {
-		const debouncedCalculateWrap = debounce(calculateWrap, debounceTime);
+		const debouncedCalculateWrap = debounce(detectWrap, debounceTime);
 
 		const observer = new ResizeObserver(debouncedCalculateWrap);
 		const mutationObserver = new MutationObserver(debouncedCalculateWrap);
@@ -52,13 +56,8 @@ export const useFlexWrap = <T extends HTMLElement>({ debounceTime = 300 }: IUseF
 			observer.disconnect();
 			window.removeEventListener('resize', debouncedCalculateWrap);
 		};
-	}, [calculateWrap, debounceTime]);
+	}, [detectWrap, debounceTime]);
 
-	useEffect(() => {
-		const timeout = setTimeout(() => calculateWrap(), 0);
-		return () => clearTimeout(timeout);
-	}, [calculateWrap]);
-
-	return { ref: containerRef, wrap, wrapStage };
+	return { ref: containerRef, wrap, wrapStage, detectWrap };
 };
 
