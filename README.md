@@ -55,14 +55,19 @@ export default ExampleComponent;
 ### `useFlexWrap<T extends HTMLElement>(options?: IUseFlexWrapOptions)`
 
 #### Parameters
+
 - **`T`** *(generic, optional)*:
   Specifies the type of the element that will be assigned to the `ref`. Defaults to `HTMLElement`.
 - `options` (optional):
-  - **debounceTime** (`number`): The debounce duration in milliseconds for recalculating layout changes. Default is
-    `300ms`.
+    - **debounceTime** (`number`): The debounce duration in milliseconds for recalculating layout changes. Default is
+      `300ms`.
 
 #### Returns
 
 - **ref**: `RefObject<T>` to attach to the flex container you want to monitor.
 - **wrap**: A `boolean` indicating whether the children are wrapping to multiple lines.
 - **wrapStage**: A `number` representing the number of lines ("wrap stages") in the container.
+- **detectWrap**: A `function` that forces the recalculation of the wrap state. This is needed when your element is
+  added dynamically, for example, if your container is conditionally rendered. The reference to this function does not
+  change, so if your ESLint configuration requires you to include functions in the dependency array, you can safely do
+  so.
