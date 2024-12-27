@@ -63,6 +63,6 @@ export default ExampleComponent;
 
 #### Returns
 
-- **ref**: `ref<T>` to attach to the flex container you want to monitor.
+- **ref**: `RefObject<T>` to attach to the flex container you want to monitor.
 - **wrap**: A `boolean` indicating whether the children are wrapping to multiple lines.
 - **wrapStage**: A `number` representing the number of lines ("wrap stages") in the container.
