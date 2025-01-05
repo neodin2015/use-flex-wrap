@@ -1,6 +1,6 @@
 {
   "name": "use-flex-wrap",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "files": [
     "dist"
@@ -44,7 +44,8 @@
     "typescript": "~5.6.2",
     "typescript-eslint": "^8.18.2",
     "vite": "^6.0.5",
-    "vite-plugin-dts": "^4.4.0"
+    "vite-plugin-dts": "^4.4.0",
+    "vue": "^3.5.13"
   },
   "keywords": [
     "react",
@@ -52,9 +53,9 @@
     "flex-wrap",
     "use-flex-wrap",
     "react-flex",
-    "react-hooks"
-  ],
-  "dependencies": {
-    "vue": "^3.5.13"
-  }
+    "react-hooks",
+    "vue",
+    "vue-flex",
+    "vue-hooks"
+  ]
 }

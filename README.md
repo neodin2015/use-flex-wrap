@@ -91,9 +91,9 @@ export default {
 
 ### General Signature
 
-*`useFlexWrap<T extends HTMLElement>(options?: IUseFlexWrapOptions)`* _(React)_
+**`useFlexWrap<T extends HTMLElement>(options?: IUseFlexWrapOptions)`** _(React)_
 
-*`useFlexWrap(userOptions?: IUseFlexWrapOptions)`* _(Vue)_
+**`useFlexWrap(userOptions?: IUseFlexWrapOptions)`** _(Vue)_
 
 #### Parameters
 

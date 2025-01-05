@@ -1,6 +1,13 @@
 # Changelog
 
 All notable changes to this project will be documented in this file.
+## [1.0.1] - 2025-01-05
+### Added 
+- Added new keywords to `package.json` for Vue.
+
+### Changed
+- Updated README (markup changes only).
+- Moved Vue dependency to `devDependencies` in `package.json`.
 
 ## [1.0.0] - 2025-01-05
 ### Added
